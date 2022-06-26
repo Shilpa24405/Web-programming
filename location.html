@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript2d</title>
+</head>
+<body>
+    <script>
+function fun(str)
+{ return new Promise((resolve, reject) =>{
+    let pattern=/paris/i;
+    let result=str.match(pattern);
+    if(result)
+    resolve("let's take a trip to paris");
+    else
+    reject("invalid location")
+})
+
+}
+let str=prompt("enter a location")
+fun(str).then(function(v){alert(v)}).catch(function(error){alert(error)});
+</script>
+</body>
+</html>

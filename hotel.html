@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript2d</title>
+</head>
+<body>
+    <script>
+    function bookFlight(str)
+{ return new promise((resolve, reject) =>{
+    let pattern=/book-flight/i;
+    let result=str.match(pattern);
+if(result)
+resolve("your flight is booked");
+else
+reject("flight not booked")    
+})}
+function bookhptel(str1)
+{ return new promise((resolve, reject) =>{
+    let pattern=/book-hotel/i;
+    let result=str1.match(pattern);
+if(result)
+resolve("your hotel is booked");
+else
+reject("hotel not booked")   
+})}
+let str=prompt("if want to book a flight enter book-flight");
+bookflight(str).then(function(v){alert(v);
+ let str1;str1=prompt("if want to book a hotel enter book-hotel")
+ bookhotel(str1).then(function(v){alert(v)}).catch(function(error){alert(error)})
+}).catch(function(error){alert(error)});   
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher technique</title>
+</head>
+<body>
+    <script>
+    function enc(a, s)
+    {
+        let res=""
+        for (let i = 0; i < a.length; i++)
+        {
+            let char = a[i];
+            if (char.toUpperCase(a[i]))
+            {
+                let ch = String.fromCharCode((char.charCodeAt(0) + s-65) % 26 + 65);
+                res += ch;
+            }
+            else
+            {
+                let ch = String.fromCharCode((char.charCodeAt(0) + s-97) % 26 + 97);
+                res += ch;
+            }
+        }
+        return res;
+    }
+    var a=(prompt("Enter plain text"));
+    var s=(Number(prompt("Enter the shift")));
+    document.write("a : " + a + "<br>");
+    document.write("Shift : " + s + "<br>");
+    document.write("Cipher: " + enc(a, s) + "<br>");
+
+    </script>
+</body>
+</html>

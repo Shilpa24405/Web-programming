@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var a=[];
+        var len=prompt("enter the len of array");
+        for(var i=0;i<len;i++)
+        {
+            a[i]=prompt("enter the element "+(i+1));
+        }
+        document.write(a );       
+        var temp,s=0,e=len;
+        while(s<e)
+        {
+            temp=a[s];
+            a[s]=a[e];
+            a[e]=temp;
+            s++;
+            e--;
+        }
+        document.write("reversed  array"+a);
+   </script> 
+</body>
+</html>

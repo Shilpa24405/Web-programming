@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        function jumpSearch(array, a, m)
+        {  
+            let s = Math.sqrt(m);
+            let pv = 0;
+            while (array[Math.min(s, m)-1] < a)
+            {
+                pv = s;
+                s += Math.sqrt(m);
+                if (pv >= m)
+                    return -1;
+            }
+            while (array[pv] < a)
+            {
+                pv++;
+                if (pv == Math.min(s, m))
+                    return -1;
+            }
+            if (array[pv] == a)
+                return pv;
+            return -1;
+        }
+        let array = [10, 20, 20, 40, 116, 117, 
+                134, 155, 189, 44, 33, 77, 61];
+        let a = prompt("Enter the key:");
+        let m = array.length;
+        let index = jumpSearch(array, a, m);
+        
+        if(index>=0 && index<=m)
+        document.write("Success");
+        else
+        document.write("Failure");
+        </script>
+        
+</body>
+</html>

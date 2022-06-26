@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+    <body>
+        <script>
+            function countCow(Heads, Legs)
+            {
+                var count = 0;
+                count = (Legs)-2 * (Heads);
+                count = count / 2;
+                return count;
+            }
+            var Heads = 18, Legs = 50;
+            var cow = countCow(Heads, Legs);
+            document.write("cow =00" + cow + "<br>");
+            document.write("chicken =0" + (Heads - cow));
+            
+
+        </script>
+    </body>
+</html>

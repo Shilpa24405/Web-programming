@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let find = (s, n) => {
+            let ans = new Array();
+            for (let i = 0; i < s.length; i++) {
+                if (s[i].length == n)
+                    ans.push(s[i]);
+            }
+            if (ans.length == 0)
+                return ["none"];
+            return ans;
+        }
+        let size = prompt("enter the size of string array")
+        alert("enter the string array");
+        let s = new Array();
+        for (let i = 0; i < size; i++) {
+            s[i] = prompt("enter string no " + i + 1 + " : ");
+        }
+        let n = parseInt(prompt("enter the size of string you want to find :"));
+        alert("strings of size " + n + " is: " + find(s, n))
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let f1 = () => {
+            let s = prompt("Enter the string : ");
+            if (s[0] >= "a" && s[0] <= "z") {
+                let r = s.charCodeAt(s[0]) - 97; 
+                alert("After updating string is : " + String.fromCharCode(65 + r) + s.slice(1));
+            }
+            else alert("After updating string is :" + s);``
+        }
+
+        let f2 = () => {
+            let s = prompt("Enter the string :");
+            alert(s + "string after inserting a string in between :" + s.slice(0, 3) + "bar" + s.slice(3));
+        };
+
+let f3 = () => {
+            let s = prompt("ENter the string :");
+            for (let i = 0; i < s.length; i++) {
+                if (!(s[i] >= "A" && s[i] <= "Z") && !(s[i] >= "a" && s[i] <= "z")) {
+                    alert("Not a string");
+                    return;
+               }
+            }
+            alert("Is a string");
+        };
+        let f4 = () => {
+            let s = prompt("Enter the string :");
+            let array = s.split("");
+            alert(s + "after splitting : " + array);
+        };
+        f1();
+        f2();
+        f3();
+       f4();
+</script>
+</body>
+</html>
